@@ -1,0 +1,33 @@
+body {
+    background: #f7f7f7;
+}
+
+.container.main.text {
+    margin-top: 5em;
+    margin-bottom: 3em;
+}
+
+.image.fluid {
+    margin-bottom: 1em;
+}
+
+#dateCreated {
+    font-size: 0.9em;
+    color: rgb(75, 75, 75);
+}
+
+hr {
+    color: rgba(151, 151, 151, 0.3);
+}
+
+.edit.icon, .trash.icon {
+    padding-left: 0.6em;
+}
+
+#deleteButtonForm {
+    display: inline;
+}
+
+.description.showPage {
+    margin-bottom: 1em;
+}

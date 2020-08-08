@@ -1,0 +1,29 @@
+<%- include("partials/header") %>
+
+<div class="ui main text container segment">
+    <h1 class="ui huge header"> <%= blog.title %> </h1>
+    <div class="ui top attached">
+        <div class="ui fluid image rounded">
+            <img src=" <%= blog.image %> ">
+        </div>
+        <div class="content">
+            <div class="extra" id="dateCreated">
+                <%= blog.created.toDateString() %>
+            </div>
+            <div class="meta">
+                <span><hr></span>
+            </div>
+            <div class="description showPage">
+                <!-- using below tag it will evaluate the html used in it and then shows text -->
+                <p><%- blog.body %></p>
+            </div>
+        </div>
+        <a href="/blogs/<%= blog._id %>/edit" class="ui basic green medium button">Edit<i class="edit icon"></i></a>
+        <!-- using method override package to override post req. to DELETE req. -->
+        <form id="deleteButtonForm" action="/blogs/<%= blog._id %>?_method=DELETE" method="post">
+            <button class="ui basic right floated red medium button">Delete <i class="trash alternate outline icon"></i></button>
+        </form>
+    </div>
+</div>
+
+<%- include("partials/footer") %>
